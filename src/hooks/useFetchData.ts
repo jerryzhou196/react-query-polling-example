@@ -22,6 +22,6 @@ export const useFetchData = () => {
       }
       return response.json();
     },
-    staleTime: 0, // Data is immediately stale
+    staleTime: Infinity, // Data is immediately stale
   });
 };

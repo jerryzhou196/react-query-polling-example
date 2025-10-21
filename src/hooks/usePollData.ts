@@ -22,6 +22,6 @@ export const usePollData = () => {
       return response.json();
     },
     refetchInterval: 2000,
-    staleTime: 0, // Data is immediately stale
+    staleTime: Infinity, // Data is immediately stale
   });
 };
