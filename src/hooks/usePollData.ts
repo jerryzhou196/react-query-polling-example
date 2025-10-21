@@ -21,7 +21,7 @@ export const usePollData = () => {
       }
       return response.json();
     },
-    refetchInterval: 2000,
+    refetchInterval: 5000,
     staleTime: Infinity, // Data is immediately stale
   });
 };
