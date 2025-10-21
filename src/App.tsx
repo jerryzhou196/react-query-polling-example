@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import {
   QueryClient,
   QueryClientProvider,
@@ -6,7 +5,10 @@ import {
 } from '@tanstack/react-query';
 import { useFetchData } from './hooks/useFetchData';
 import { usePollData } from './hooks/usePollData';
-import { RefreshCw, AlertCircle } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
+
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
 
 const queryClient = new QueryClient();
 
@@ -71,6 +73,7 @@ function DataDisplay() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={true}/>
       <DataDisplay />
     </QueryClientProvider>
   );
